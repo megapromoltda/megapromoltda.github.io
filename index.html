@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGAPROMO</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="buttonzap">
+        <a href='https://api.whatsapp.com/send?phone=5511994215083&text=Ol%C3%A1,%20Desejo%20Realizar%20Uma%20Cota%C3%A7%C3%A3o.'class="icon" target='_blank'><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+
+
+    <div id="modeloNovoProduto">
+        <div class="fileira--elemento">
+            <img class="imagemProduto" src="" />
+            <h3 class="nomeProduto"></h3>
+            <h3 class="precoProduto"></h3>
+        </div>
+    </div>
+    <div id="modeloProdutoEscolhido">
+        <div id="imgEscolhida">
+            <img src="" />
+        </div>
+        <div id="textosEscolhido">
+            <div id="fecharEscolhido">X</div>
+            <div id="nomeEscolhido"></div>
+            <div id="precoEscolhido"></div>
+            <button id="btnEscolhido">Entrar em contato</button>
+        </div>
+    </div>
+
+    <header>
+        <div id="logo"><img style="width: 110px;" src="./assets/images/logomegapromo.webp" alt=""></div>
+        <nav>
+            <a href="/" class="headerLink">HOME</a>
+            <a href="#contato" class="headerLink">CONTATO</a>
+            <a href="#produtos" class="headerLink">PRODUTOS</a>
+        </nav>
+        <div id="menuCelular"></div>
+    </header>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+    </style>
+
+    <main>
+        <a href="https://api.whatsapp.com/send?phone=5511994215083&text=Ol%C3%A1,%20Desejo%20Realizar%20Uma%20Cota%C3%A7%C3%A3o."
+            id="contatoWpp">
+            <img class="logoWpp" src="assets/images/whatsapp_logo.png" />
+            <p class="paragrafoWpp">Clique aqui e fale conosco</p>
+        </a>
+        <section id="banner">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="./assets/images/Show de Ofertas - Banner - Paisagem .png" alt="Imagem 1">
+                    <img src="./assets/images/e38ac15d-93ca-4c9e-90a6-46ca2a289c2d___54cba328370164ebd60d8cfd5605159d.jpg"
+                        alt="Imagem 2">
+                    <img src="./assets/images/1649542673_imagem_capa_nova.jpeg" alt="Imagem 3">
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+        <div id="produtos">
+            <h1 style="text-align: center;background-color: green;color: white;margin: 10px;">Mais Vendidos</h1>
+        </div>
+
+        <section id="eletrica" class="sectionProdutos">
+            <h2 class="tituloSection">Elétrica</h2>
+            <div class="fileira"></div>
+        </section>
+
+        <section id="pintura" class="sectionProdutos">
+            <h2 class="tituloSection">Pintura</h2>
+            <div class="fileira"></div>
+        </section>
+
+        <div style="    
+        display: flex;
+        justify-content: center;
+        margin: 10px;">
+            <img src="./assets/images/download.png" alt="">
+        </div>
+        <div id="contato" class="form-container">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <input type="hidden" name="accessKey" value="a5b4f555-9f06-4af2-8bd7-7df5ae667c69"> <!-- Required -->
+
+                <label for="nome">Nome:</label>
+                <input placeholder="Digite Seu Nome" type="text" id="nome" name="$NOME" required>
+
+                <label for="telefone">Telefone:</label>
+                <input placeholder="Digite Seu Telefone" type="tel" id="telefone" name="$TELEFONE" required>
+
+                <label for="cnpj">CNPJ:</label>
+                <input placeholder="Digite Seu CNPJ" type="text" id="cnpj" name="$CNPJ" required>
+
+                <label for="email">E-mail:</label>
+                <input placeholder="Digite Seu Email" type="email" id="email" name="$EMAIL" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea placeholder="Digite Sua Duvida ou Solicitacao." id="mensagem" name="$MENSAGEM" rows="4"
+                    required></textarea>
+                <input type="hidden" name="redirectTo" value="https://lojanovolar.github.io/obrigado"> <!-- Optional -->
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=5511994215083&text=Ol%C3%A1,%20Desejo%20Realizar%20Uma%20Cota%C3%A7%C3%A3o."
+            id="contatoWpp">
+            <img class="logoWpp" src="assets/images/whatsapp_logo.png" />
+            <p class="paragrafoWpp">Clique aqui e fale conosco</p>
+        </a>
+
+
+        <div class="image-container" id="imageContainer" style="display: none;">
+            <!-- Coloque o caminho da sua imagem aqui -->
+            <img src="./assets/images/logonovolar.png" alt="Imagem após envio">
+        </div>
+
+
+        <section id="localizacao" class="sectionProdutos">
+            <h2 id="tituloLocalizacao">Onde estamos localizados?</h2>
+            <address id="paragrafoLocalizacao">Você pode nos encontrar na Av. Engenheiro Luís Carlos Berrini, 1511
+                Brooklin, São Paulo - SP, 04571-011<br>Clique no mapa abaixo para ver a localização:</address>
+            <a
+                href="https://www.google.com/maps/place/R.+dos+Pinheiros,+70+-+Jardim+Felicidade(Zona+Norte),+S%C3%A3o+Paulo+-+SP,+02326-005/@-23.4417939,-46.5763238,3a,75y,57.35h,90t/data=!3m6!1e1!3m4!1sxcJGFbJ2qTQtQB9WscnD4Q!2e0!7i16384!8i8192!4m5!3m4!1s0x94cef4382d972fa9:0xedb79ec6856374c1!8m2!3d-23.4417385!4d-46.5762534"><img
+                    id="imgLocalizacao" src="./assets/images/mapa.PNG" /></a>
+        </section>
+    </main>
+
+
+    <footer>
+        <div>
+            <h5>Selos De Seguranca: </h5>
+            <ul style="   
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+        flex-wrap: wrap;
+    ">
+                <li><img src="./assets/images/105854.png" alt=""></li>
+                <li><img src="./assets/images/seal.png" alt=""></li>
+                <li><img src="./assets/images/selo_lojaprotegida.gif" alt=""></li>
+                <li><img src="./assets/images/certisign.png" alt=""></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Formas De Pagamento: </h5>
+            <ul style="   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        align-items: center;
+    ">
+                <li><img style="width: 80%;" src="./assets/images/bandeiras.png" alt=""></li>
+                <li><img style="width: 80%;" src="./assets/images//boletofaturado.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="copy-rights">
+            <img style="width: 400px;padding: 20px;" src="./assets/images/logomegapromo.webp" alt="">
+            <h6>Todos Direitos Reservados MegaPromo - 2024</h6>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./assets/js/produtos.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
